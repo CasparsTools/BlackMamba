@@ -11,10 +11,10 @@ import platform
 import threading
 import socket
 from cryptography.fernet import Fernet
-#from PySide2 import QtCore, QtGui, QtWidgets
-#from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-#from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
-#from PySide2.QtWidgets import *
+from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide2.QtWidgets import *
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 from PyQt5.QtCore import *
@@ -74,8 +74,8 @@ class MainWindow(QMainWindow):
         
 
         ## PRINT ==> SYSTEM
-        #print('System: ' + platform.system())
-        #print('Version: ' +platform.release())
+        print('System: ' + platform.system())
+        print('Version: ' +platform.release())
 
         ########################################################################
         ## START - WINDOW ATTRIBUTES
@@ -109,9 +109,9 @@ class MainWindow(QMainWindow):
         ## ==> ADD CUSTOM MENUS
         #self.ui.stackedWidget.setMinimumWidth(20)
 
-        #UIFunctions.addNewMenu(self, "HOME", "btn_home", "url(:/16x16/icons/16x16/cil-home.png)", True)
-        #UIFunctions.addNewMenu(self, "Add User", "btn_new_user", "url(:/16x16/icons/16x16/cil-user-follow.png)", True)
-        #UIFunctions.addNewMenu(self, "Custom Widgets", "btn_widgets", "url(:/16x16/icons/16x16/cil-equalizer.png)", False)
+        UIFunctions.addNewMenu(self, "HOME", "btn_home", "url(:/16x16/icons/16x16/cil-home.png)", True)
+        UIFunctions.addNewMenu(self, "Add User", "btn_new_user", "url(:/16x16/icons/16x16/cil-user-follow.png)", True)
+        UIFunctions.addNewMenu(self, "Custom Widgets", "btn_widgets", "url(:/16x16/icons/16x16/cil-equalizer.png)", False)
 
         ## ==> END ##
 
@@ -120,7 +120,7 @@ class MainWindow(QMainWindow):
         ## ==> END ##
 
         ## ==> START PAGE
-        #self.ui.stackedWidget.setCurrentWidget(self.ui.page_home)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.page_home)
         ## ==> END ##
 
         ## USER ICON ==> SHOW HIDE
@@ -200,20 +200,20 @@ class MainWindow(QMainWindow):
         self.dragPos = event.globalPos()
         if event.buttons() == Qt.LeftButton:
             pass
-            #print('Mouse click: LEFT CLICK')
+            print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
             pass
-            #print('Mouse click: RIGHT CLICK')
+            print('Mouse click: RIGHT CLICK')
         if event.buttons() == Qt.MidButton:
             pass
-            #print('Mouse click: MIDDLE BUTTON')
+            print('Mouse click: MIDDLE BUTTON')
     ## ==> END ##
 
     ## EVENT ==> KEY PRESSED
     ########################################################################
     def keyPressEvent(self, event):
         pass
-        #print('Key: ' + str(event.key()) + ' | Text Press: ' + str(event.text()))
+        print('Key: ' + str(event.key()) + ' | Text Press: ' + str(event.text()))
     ## ==> END ##
 
     ## EVENT ==> RESIZE EVENT
@@ -224,7 +224,7 @@ class MainWindow(QMainWindow):
 
     def resizeFunction(self):
         pass
-        #print('Height: ' + str(self.height()) + ' | Width: ' + str(self.width()))
+        print('Height: ' + str(self.height()) + ' | Width: ' + str(self.width()))
     ## ==> END ##
 
     ########################################################################
